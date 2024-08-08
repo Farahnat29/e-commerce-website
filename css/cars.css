@@ -1,0 +1,32 @@
+.flight-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location,
+.dates,
+.guests {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    /* Add margin between sections */
+}
+
+.location input,
+.dates input,
+.guests select {
+    margin-right: 5px;
+    /* Reduce margin between inputs/select and buttons */
+    padding: 8px;
+    /* Adjust padding for better appearance */
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

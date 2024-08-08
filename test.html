@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var username = localStorage.getItem('userName');
+            if (username) {
+                var registerLoginDiv = document.querySelector('.register-login');
+                registerLoginDiv.innerHTML =
+                    '<a href="http://localhost/dashboard-history.html" class="user-name"><i class="icon-user mr-1"></i> ' +
+                    username + '</a>' +
+                    '<a href="#" onclick="logout()"><i class="icon-power-off mr-1"></i> Logout</a>';
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem('userName'); // Clear the user's name from local storage
+            window.location.href = 'index-3.html'; // Redirect to the homepage or login page
+        }
+    </script>
+
+
+</body>
+
+</html>
